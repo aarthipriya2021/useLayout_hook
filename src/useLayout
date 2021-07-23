@@ -1,0 +1,30 @@
+Hooks:
+     -	Hooks are the functions which "hook into" React state and lifecycle features from        
+            function  components	.
+    -	React offers a number of built-in Hooks. A few of these include  useState(),    
+         useEffect(),  useContext(), useReducer(),    and useRef() 
+
+Rules:
+    -   Never call Hooks from inside a loop, condition or nested function
+    -   Hooks should sit at the top-level of your component
+    -   Only call Hooks from React functional components
+    -   Never call a Hook from a regular function
+    -   Hooks can call other Hooks
+
+useEffect:
+    -   useEffect accepts a function which can perform any side effects.
+    -   The React hook useEffect helps in adding componentDidUpdate 
+        and componentDidMount combined lifecycle in React's functional component
+syntax:
+    useEffect(effectFunction, arrayDependencies)
+functions:
+    -   useEffect calls can be skipped i.e not invoked on every render. This is done by 
+        passing a second array argument to the effect function.(dependency array)
+    -   Without an array dependency, the effect function will be run after every single render.
+
+useLayout:
+    -   The signature is identical to useEffect 
+    -   The React useLayouEffect hook is written the same way as useEffect, and almost behaves the same way.
+    -   One of the key differences is that it gets executed right after a React component render lifecycle, 
+        and before useEffect gets triggered.
+    -   You only want to use this hook when you need to do any DOM changes directly.
